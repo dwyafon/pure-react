@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem auto;
+}
+
+.label {
+    max-width: 50rem;
+    padding: 3rem;
+    border: 1px #121212 solid;
+    box-shadow: 0 10px 6px -6px #777;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background-color: #201c1b;
+    color: cornsilk;
+}
+
