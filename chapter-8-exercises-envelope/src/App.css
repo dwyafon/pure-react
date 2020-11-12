@@ -1,0 +1,31 @@
+.envelope {
+    margin: 10rem auto;
+    background-color: #201c1b;
+    color: cornsilk;
+    border: 1px #121212 solid;
+    box-shadow: 0 10px 6px -6px #777;
+    max-width: 50rem;
+}
+
+.topRow {
+    display: flex;  
+    justify-content: space-between;
+    font-size: 1rem;
+    line-height: 1.5srem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+i {
+    color: red
+}
+
+.bottomRow {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin: 2rem;
+    padding: 5rem;
+}
+
+
