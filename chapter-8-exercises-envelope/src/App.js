@@ -42,7 +42,7 @@ function ToAddressLabel() {
 
 function Stamp() {
   return (
-    <div className='Stamp'>
+    <div className='stamp'>
       <i className='fab fa-canadian-maple-leaf fa-5x'></i>
     </div>
   );
@@ -69,9 +69,6 @@ App.propTypes = {
     cityState: PropTypes.string.isRequired,
     code: PropTypes.string.isRequired,
   }),
-};
-
-App.propTypes = {
   fromPerson: PropTypes.shape({
     name: PropTypes.string.isRequired,
     street: PropTypes.string.isRequired,
