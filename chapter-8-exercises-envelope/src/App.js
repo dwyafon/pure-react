@@ -52,14 +52,14 @@ export const toPerson = {
   name: 'Dale Cooper',
   street: '137 W North Bend Way',
   cityState: 'Twin Peaks, WA',
-  code: 98045,
+  code: '98045',
 };
 
 export const fromPerson = {
-  name: 'Harry Truman',
+  name: 'Jean Renault',
   street: '123 Blacklodge Road',
-  cityState: 'Twin Peaks, WA',
-  code: 98045,
+  cityState: 'Fraser Valley, BC',
+  code: 'V0X 1L2',
 };
 
 App.propTypes = {
@@ -67,7 +67,7 @@ App.propTypes = {
     name: PropTypes.string.isRequired,
     street: PropTypes.string.isRequired,
     cityState: PropTypes.string.isRequired,
-    code: PropTypes.number.isRequired,
+    code: PropTypes.string.isRequired,
   }),
 };
 
@@ -76,7 +76,7 @@ App.propTypes = {
     name: PropTypes.string.isRequired,
     street: PropTypes.string.isRequired,
     cityState: PropTypes.string.isRequired,
-    code: PropTypes.number.isRequired,
+    code: PropTypes.string.isRequired,
   }),
 };
 
