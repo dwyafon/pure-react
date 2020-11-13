@@ -1,31 +1,62 @@
-.envelope {
+.card {
     margin: 10rem auto;
-    background-color: #201c1b;
-    color: cornsilk;
-    border: 1px #121212 solid;
+    color: #fff;
+    background-color: rgb(42, 95, 165);
+    border: none;
+    border-radius: 10px;
     box-shadow: 0 10px 6px -6px #777;
-    max-width: 50rem;
-}
-
-.topRow {
-    display: flex;  
-    justify-content: space-between;
-    font-size: 1rem;
-    line-height: 1.5srem;
-    margin: 1rem 1rem 0 1rem;
-}
-
-i {
-    color: red
-}
-
-.bottomRow {
+    max-width: 17rem;
+    padding: 2rem;
     display: flex;
-    justify-content: center;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    margin: 2rem;
-    padding: 5rem;
+    flex-direction: column;
 }
 
+.bank {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* margin-bottom: 2rem; */
+    font-size: 1.5rem;
+}
+
+.number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    padding: 2.5rem 0 0 0;
+}
+
+.firstFour {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 0.7rem;
+    margin-bottom: -0.5rem;
+}
+
+.validThru {
+    font-size: 0.6rem;
+    text-align: center;
+    margin-right: 0.4rem;
+    line-height: 80%;
+}
+
+.date {
+    font-size: 1.1rem;
+    line-height: 100%;
+}
+
+.expires {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0.6rem;
+}
+
+.name {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
 

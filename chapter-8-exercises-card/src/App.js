@@ -2,81 +2,44 @@ import React from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
 
-function App({ toPerson, fromPerson }) {
+function App({ cardInfo }) {
   return (
-    <div className='envelope'>
-      <div className='topRow'>
-        <FromAddressLabel />
-        <Stamp />
-      </div>
-      <div className='bottomRow'>
-        <ToAddressLabel />
-      </div>
+    <div className='card'>
+      <BankName />
+      <CardNumber />
+      <FirstFourNumbers />
+      <ExpirationDate />
+      <Name />
     </div>
   );
 }
 
-function FromAddressLabel() {
+const BankName = () => <div className='bank'>{cardInfo.bankName}</div>;
+const CardNumber = () => <div className='number'>{cardInfo.cardNumber}</div>;
+const FirstFourNumbers = () => <div className='firstFour'>0123</div>;
+const ExpirationDate = () => {
   return (
-    <div className='label'>
-      <div className='toAddress'></div>
-      <div className='name'>{fromPerson.name}</div>
-      <div className='street'>{fromPerson.street}</div>
-      <div className='cityState'>{fromPerson.cityState}</div>
-      <div className='postcode'>{fromPerson.code}</div>
-    </div>
-  );
-}
-
-function ToAddressLabel() {
-  return (
-    <div className='label'>
-      <div className='toAddress'></div>
-      <div className='name'>{toPerson.name}</div>
-      <div className='street'>{toPerson.street}</div>
-      <div className='cityState'>{toPerson.cityState}</div>
-      <div className='postcode'>{toPerson.code}</div>
-    </div>
-  );
-}
-
-function Stamp() {
-  return (
-    <div className='Stamp'>
-      <i className='fab fa-canadian-maple-leaf fa-5x'></i>
-    </div>
-  );
-}
-
-export const toPerson = {
-  name: 'Dale Cooper',
-  street: '137 W North Bend Way',
-  cityState: 'Twin Peaks, WA',
-  code: '98045',
+  <div className='expires'>
+    <div className='validThru'>VALID<div>THRU</div></div>
+  <div className='date'>{cardInfo.expirationDate}</div>
+  </div>
+  )
 };
+const Name = () => <div className='name'>{cardInfo.name}</div>;
 
-export const fromPerson = {
-  name: 'Jean Renault',
-  street: '123 Blacklodge Road',
-  cityState: 'Fraser Valley, BC',
-  code: 'V0X 1L2',
+export const cardInfo = {
+  name: 'Harry Truman',
+  expirationDate: '01/21',
+  cardNumber: '0123 4567 8910 1112',
+  bankName: 'Twin Peaks Bank',
 };
 
 App.propTypes = {
-  toPerson: PropTypes.shape({
+  cardInfo: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    street: PropTypes.string.isRequired,
-    cityState: PropTypes.string.isRequired,
-    code: PropTypes.string.isRequired,
-  }),
-};
-
-App.propTypes = {
-  fromPerson: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    street: PropTypes.string.isRequired,
-    cityState: PropTypes.string.isRequired,
-    code: PropTypes.string.isRequired,
+    expirationDate: PropTypes.string.isRequired,
+    cardNumber: PropTypes.string.isRequired,
+    bankName: PropTypes.string.isRequired,
   }),
 };
 
