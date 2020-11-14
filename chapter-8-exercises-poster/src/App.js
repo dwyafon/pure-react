@@ -29,14 +29,13 @@ export const poster = {
     alt: 'A creek moving down over rocks in a forest',
   },
   title: 'Keep Flowing',
-  text:
-    'Be like water, cutting through rock over years because it is persistent.',
+  text: 'Be like water, cutting through rock over years because it is persistent.',
 };
 
 Image.propTypes = {
   image: PropTypes.shape({
     src: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
   }),
 };
 Title.propTypes = { title: PropTypes.string.isRequired };
