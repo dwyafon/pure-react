@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 function App({ email }) {
   const { sender, subject, date, message } = email;
@@ -36,21 +36,22 @@ const MiddleRow = () => {
   );
 };
 
-const BottomRow = ( { message }) => <div className='message'>{message}</div>
+const BottomRow = ({ message }) => <div className='message'>{message}</div>;
 
 export const email = {
   sender: 'Diane',
   subject: 'The Black Lodge',
-  date: 'Mar 1989',
-  message: 'Do not go in there, Agent Cooper.'
+  date: 9,
+  message: 'Do not go in there, Agent Cooper.',
 };
 
-// TopRow.propTypes = {
-//   image: PropTypes.shape({
-//     src: PropTypes.string.isRequired,
-//     text: PropTypes.string.isRequired,
-//   }),
-// };
-
+App.propTypes = {
+  email: PropTypes.shape({
+    sender: PropTypes.string.isRequired,
+    subject: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
+  }),
+};
 
 export default App;
