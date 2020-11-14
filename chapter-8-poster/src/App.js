@@ -25,7 +25,7 @@ const Text = ({ text }) => <div className='text'>{text}</div>;
 
 export const poster = {
   image: {
-    src: 'https://source.unsplash.com/xcNvDSLepXI/1200x700',
+    src: 'https://source.unsplash.com/xcNvDSLepXI/1000x600',
     alt: 'A creek moving down over rocks in a forest',
   },
   title: 'Keep Flowing',
