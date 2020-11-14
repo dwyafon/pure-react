@@ -41,8 +41,8 @@ const BottomRow = ({ message }) => <div className='message'>{message}</div>;
 export const email = {
   sender: 'Diane',
   subject: 'The Black Lodge',
-  date: 9,
-  message: 'Do not go in there, Agent Cooper.',
+  date: 'Mar 1989',
+  message: 'Do not go into the Black Lodge, Agent Cooper.',
 };
 
 App.propTypes = {
