@@ -1,18 +1,20 @@
-.envelope {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10rem auto;
-    border: 1px #121212 solid;
-    box-shadow: 0 10px 6px -6px #777;
-    background-color: #201c1b;
-    color: cornsilk;
+    height: 100vh;
+    background-color: #f0f0f0;
+   
 }
 
 .label {
     max-width: 20rem;
     padding: 3rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    color: cornsilk;
     line-height: 1.5rem; 
+    box-shadow: 0 10px 6px -6px #777;
+    background-color: #201c1b;
+    
 }
 
