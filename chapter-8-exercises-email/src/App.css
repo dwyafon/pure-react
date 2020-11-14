@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+.email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #b5ada8 solid 1px;
+    border-radius: 5px;
+    max-width: 80rem;
+    margin: 10rem auto;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5rem;
+}
+
+/* TopRow */
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+
+}
+
+.sender {
+    margin-left: 5rem;
+}
+
+/* MiddleRow */
+
+.middle {
+    line-height: 50%;
+}
+
+.box i {
+    margin-left: 1rem;
+    margin-right: 1.2rem;
+    color: #b5ada8;
+}
+
+.star i {
+    color: #edce07
+}
+
+/* BottomRow */
+
+.message {
+    font-size: 1.1rem;
+    color: #b5ada8;
+    margin-left: 5rem;
+}
+
+
+
+
+
+
