@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const App = () => <Dialog />;
 
@@ -34,6 +34,8 @@ const Line = () => (
   </span>
 );
 
-Dialog.propTypes = {};
+Dialog.propTypes = {
+  children: PropTypes.element,
+};
 
 export default App;
