@@ -1,27 +1,2 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-}
-
-.message {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    border-radius: 5px;
-    box-shadow: 0 -15px 10px -15px #111;
-    padding: 1rem;
-    background-color: #ff3333;
-    color: #fff;
-}
-
-i {
-    color: #fff;
-    margin-right: 1rem;
-}
-
-
