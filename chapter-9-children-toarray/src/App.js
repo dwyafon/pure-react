@@ -35,7 +35,7 @@ const FirstChildOnly = (props) => {
 };
 const LastChildOnly = (props) => {
   const lastChildArr = React.Children.toArray(props.children);
-  return <ul>{lastChildArr[2]}</ul>;
+  return <ul>{lastChildArr[lastChildArr.length - 1]}</ul>;
 };
 const Head = (props) => {
   const number = props.number;
