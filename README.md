@@ -1,1 +1,1 @@
-# Practising React with exercises from Dave Ceddia's Pure React
+# Practising React with exercises and projects from Dave Ceddia's Pure React
