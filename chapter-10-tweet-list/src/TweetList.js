@@ -7,7 +7,7 @@ const TweetList = ({ tweets }) => (
     {' '}
     <>
       {tweets.map((tweet) => (
-        <Tweet tweet={tweet} />
+        <Tweet tweet={tweet} key={tweet.id} />
       ))}
     </>
   </div>
