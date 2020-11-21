@@ -16,21 +16,24 @@ body {
 }
 
 .list {
-  background-color: #ebecf0;
+  /* background-color: #ebecf0; */
+  background-color: #1e1612;
   width: 272px;
   border: 1px solid #000;
   border-radius: 4px;
   padding: 10px;
   height: fit-content;
+  opacity: 0.8;
 }
 
 .listHeader {
   display: flex;
   justify-content: space-between;
   margin: 5px 8px;
+  color: #fff;
 }
 .options {
-    color: #5f5f5f;
+    /* color: #5f5f5f; */
     font-size: 0.8rem;
 }
 
