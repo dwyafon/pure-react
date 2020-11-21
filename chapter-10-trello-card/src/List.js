@@ -1,5 +1,4 @@
 import React from "react";
-// import MoreOptionsButton from "../../chapter-10-tweet-list/src/MoreOptionsButton";
 // import PropTypes from 'prop-types';
 
 const List = ({ list }) => (
@@ -22,15 +21,23 @@ const ListHeading = ({ title }) => (
   <span className="listHeader">
     {title}
     <span>
-      <MoreOptionsButton />
+      <MoreOptionsIcon />
     </span>
   </span>
 );
 
-const MoreOptionsButton = () => <i className="fa fa-ellipsis-h options" />;
+const MoreOptionsIcon = () => <i className="fa fa-ellipsis-h options" />;
 const PlusIcon = () => <i className="fa fa-plus plus" />;
+const CardDescriptionIcon = () => <i className='fa fa-align-left description' />;
+ 
+const Card = ({ title }) => (
+<span className="card">{title}
+<span>
+    <CardDescriptionIcon />
+</span>
+</span>
 
-const Card = ({ title }) => <span className="card">{title}</span>;
+)
 
 const AddCard = () => (
   <span className="addCard">
