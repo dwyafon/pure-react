@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("https://source.unsplash.com/1600x900/?danmark");
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.list {
+  background-color: #ebecf0;
+  width: 272px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 10px;
+  height: fit-content;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 8px;
+}
+.options {
+    color: #5f5f5f;
+    font-size: 0.8rem;
+}
+
+.allCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 260px;
+  height: 50px; /* height: 500px; */
+  padding: 8px;
+  margin: 5px;
+  border: 0.5px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0.5px 1px #5f5f5f;
+}
+
+.addCard {
+    color: #8f8f8f;
+    font-size: .9rem;
+
+
+}
+.plus {
+    margin: 5px 8px;
+}
