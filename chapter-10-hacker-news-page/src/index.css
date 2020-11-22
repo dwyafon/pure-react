@@ -1,0 +1,36 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+}
+
+.number {
+    color: #5f5f5f;
+}
+
+.upvote-icon {
+    margin-right: 5px;
+    color: #5f5f5f;
+}
+
+.title {
+    font-size: 0.9rem;
+}
+
+.domain {
+    color: #5f5f5f;
+    font-size: 0.7rem;
+}
+
+.article-second-row {
+    color: #5f5f5f;
+    font-size: 0.7rem;
+}
+
+.container {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f6f6ef;
+}
