@@ -31,6 +31,50 @@ body {
 
 .container {
     margin: 20px auto;
-    width: 80%;
+    width: 85%;
     background-color: #f6f6ef;
+}
+
+.nav {
+    background-color: #ff6600;
+    font-size: 0.85rem; 
+  
+    width: 100%;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25px;
+    width: 100%;
+    padding-left: 2px;
+}
+
+.nav ul li {
+    list-style: none;
+    margin-right: 5px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#\30  > a:nth-child(1) {
+    color: #fff;
+}
+ul.nav-list #\30 {
+    border: solid 1px #fff;
+    padding: 1px 5px;
+    font-weight: bold;
+}
+
+ul.nav-list #\31 {
+    font-weight: bold;
+}
+
+ul.nav-list #\39 {
+margin-left: auto;
 }
