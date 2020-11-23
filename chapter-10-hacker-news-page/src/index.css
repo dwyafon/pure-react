@@ -1,5 +1,6 @@
 :root {
   --grey: #828282;
+  --orange: #ff6600;
 }
 
 /* containers */
@@ -21,7 +22,7 @@ body {
 
 /* nav */
 .nav {
-  background-color: #ff6600;
+  background-color: var(--orange);
   font-size: 0.85rem;
   margin-left: 0;
   width: 100%;
@@ -66,13 +67,17 @@ ul.nav-list #\39 {
 }
 
 /* articles */
-
-td {
-    padding-left: 0.5rem;
+tr .article-first-row td {
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
 }
 
-.article-first-row td {
-  padding-top: 0.3rem;
+tr .article-second-row {
+  padding-left: 30px;
+}
+
+tr.article-second-row > td {
+  padding-left: 2.5rem;
 }
 
 .article-second-row {
@@ -100,11 +105,69 @@ td {
   font-size: 0.7rem;
 }
 
-.hide a, .comments a, .poster a, .time a {
-    color: var(--grey)
+.hide a,
+.comments a,
+.poster a,
+.time a {
+  color: var(--grey);
 }
 
 /* hover effect */
-.domain a:hover, .poster a:hover, .time a:hover, .hide a:hover, .comments a:hover  {
-    text-decoration: underline;
+.domain a:hover,
+.poster a:hover,
+.time a:hover,
+.hide a:hover,
+.comments a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+/* 
+tr > td > a.moreLink {
+  font-size: 0.9rem;
+  padding: 2.5rem 2.5rem;
+} */
+
+.footer {
+  margin-top: 1rem;
+}
+
+.moreLink {
+  font-size: 0.9rem;
+  margin-left: 2.6rem;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul li {
+  list-style: none;
+  font-size: 0.7rem;
+}
+
+.footer ul li a {
+  margin-right: 0.2rem;
+}
+
+.footer hr {
+  color: var(--orange);
+}
+
+#search-form {
+  font-size: 0.9rem;
+  color: var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+#search-form label {
+  margin-right: 0.3rem;
+}
+
+#search-form #search {
+  width: 10rem;
 }
