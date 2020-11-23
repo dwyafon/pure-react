@@ -61,8 +61,8 @@ const Article = ({ article }) => (
         <Points points={article.points} />
         <Poster poster={article.poster} />
         <Time time={article.uploaded_at} />
-        | hide |
-        <CommentsOrDiscuss comments={article.comments} />
+        <span className='hide'><a href='/'>| hide | </a></span>
+        <span className='comments'><a href='/'><CommentsOrDiscuss comments={article.comments} /></a></span>
       </td>
     </tr>
   </>
@@ -70,19 +70,19 @@ const Article = ({ article }) => (
 
 const Number = ({ number }) => <span className='number'>{number}. </span>;
 
-const Title = ({ title }) => <span className='title'>{title} </span>;
+const Title = ({ title }) => <span className='title'><a href='/'>{title}</a> </span>;
 
-const Domain = ({ domain }) => <span className='domain'>({domain})</span>;
+const Domain = ({ domain }) => <span className='domain'><a href='/'>({domain})</a></span>;
 
-const UpvoteIcon = () => <i className='fa fa-caret-up upvote-icon' />;
+const UpvoteIcon = () => <a href='/'><i className='fa fa-caret-up upvote-icon' /></a>;
 
 const Points = ({ points }) => <span className='points'>{points} points </span>;
 
-const Poster = ({ poster }) => <span className='poster'>by {poster} </span>;
+const Poster = ({ poster }) => <span className='poster'>by<a href='/'> {poster} </a></span>;
 
 const Time = ({ time }) => {
   const timeString = moment(time).fromNow();
-  return <span className='time'>{timeString} </span>;
+  return <span className='time'><a href='/'>{timeString} </a></span>;
 };
 
 const CommentsOrDiscuss = ({ comments }) => {

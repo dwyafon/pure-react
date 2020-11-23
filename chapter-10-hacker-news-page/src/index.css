@@ -1,80 +1,110 @@
+:root {
+  --grey: #828282;
+}
+
+/* containers */
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100vh;
-}
-
-.number {
-    color: #5f5f5f;
-}
-
-.upvote-icon {
-    margin-right: 5px;
-    color: #5f5f5f;
-}
-
-.title {
-    font-size: 0.9rem;
-}
-
-.domain {
-    color: #5f5f5f;
-    font-size: 0.7rem;
-}
-
-.article-second-row {
-    color: #5f5f5f;
-    font-size: 0.7rem;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  letter-spacing: -0.2px;
 }
 
 .container {
-    margin: 20px auto;
-    width: 85%;
-    background-color: #f6f6ef;
+  margin: 10px auto;
+  width: 85%;
+  background-color: #f6f6ef;
+  height: 50%;
 }
 
+/* nav */
 .nav {
-    background-color: #ff6600;
-    font-size: 0.85rem; 
-  
-    width: 100%;
+  background-color: #ff6600;
+  font-size: 0.85rem;
+  margin-left: 0;
+  width: 100%;
 }
 
 .nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 25px;
-    width: 100%;
-    padding-left: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0.1rem;
+  height: 25px;
+  margin-bottom: 0;
 }
 
 .nav ul li {
-    list-style: none;
-    margin-right: 5px;
-    color: black;
+  list-style: none;
+  margin-right: 5px;
+  color: black;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
-#\30  > a:nth-child(1) {
-    color: #fff;
+#\30 > a:nth-child(1) {
+  color: #fff;
 }
 ul.nav-list #\30 {
-    border: solid 1px #fff;
-    padding: 1px 5px;
-    font-weight: bold;
+  border: solid 1px #fff;
+  padding: 1px 5px;
+  font-weight: bold;
 }
 
 ul.nav-list #\31 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 ul.nav-list #\39 {
-margin-left: auto;
+  margin-left: auto;
+}
+
+/* articles */
+
+td {
+    padding-left: 0.5rem;
+}
+
+.article-first-row td {
+  padding-top: 0.3rem;
+}
+
+.article-second-row {
+  color: var(--grey);
+  font-size: 0.6rem;
+  line-height: 0.5rem;
+}
+
+.number {
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+.upvote-icon {
+  margin-right: 5px;
+  color: var(--grey);
+}
+
+.title {
+  font-size: 0.9rem;
+}
+
+.domain a {
+  color: var(--grey);
+  font-size: 0.7rem;
+}
+
+.hide a, .comments a, .poster a, .time a {
+    color: var(--grey)
+}
+
+/* hover effect */
+.domain a:hover, .poster a:hover, .time a:hover, .hide a:hover, .comments a:hover  {
+    text-decoration: underline;
 }
