@@ -1,22 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './index.css';
-
 // import PropTypes from 'prop-types';
-import lists from "./lists";
-import List from "./List";
 
-const CardList = ({ lists }) => {
+import stats from './objects/stats';
+import cards from './objects/cards';
+import Header from "./components/Header";
+import Card from "./components/Card";
+
+
+const App = ({ stats, cards }) => {
   return (
     <div className="container">
-      {" "}
-      <>
-        {lists.map((list) => (
-          <List list={list} key={list.id} />
-        ))}
-      </>
+      <Header stats={stats} />
+      <Card cards={cards}/>
     </div>
   );
 };
 
-ReactDOM.render(<CardList lists={lists} />, document.getElementById("root"));
+ReactDOM.render(<App stats={stats} cards={cards} />, document.getElementById("root"));
