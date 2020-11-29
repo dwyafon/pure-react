@@ -1,43 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  margin: 20px;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
-  font-weight: 300;
 }
 
 .statsRow {
   display: flex;
-  flex-direction: row;;
+  flex-direction: row;
 }
 
 .cards {
   display: flex;
   flex: 1 1 1;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  height: 400px;
+  width: 330px;
+  height: 460px;
   border: 0.5px solid #c0c0c0;
   border-radius: 10px;
   box-shadow: 0.1 0.1 0.2 #c0c0c0;
   margin: 1rem;
 }
 
-.cardTitle, .cardHeading {
-  padding: 1rem;
+.cardTitle,
+.cardHeading {
+  padding: 0.5rem;
 }
 
 .images {
@@ -47,22 +49,31 @@ body {
 }
 
 .mainImage {
-  max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
 }
 
 .subimages {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.subimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img {
+  border-radius: 5px;
 }
 
 .followButton {
-  width: 100%;
-  margin-top: 1rem;
+  margin: 0.5rem;
+  padding: 0.25rem;
 }
-
-
