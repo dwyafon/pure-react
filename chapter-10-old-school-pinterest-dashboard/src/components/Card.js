@@ -2,21 +2,39 @@ import React from "react";
 
 // import PropTypes from 'prop-types';
 
-const Card = ({ cards }) => (
-  <div className="list">
-    <div>
-      <ListHeading title={list.listHeader} />
-    </div>
-    <div className="allCards">
-      {list.cards.map((card) => (
-        <Card title={card.title} key={card.id} />
-      ))}
-    </div>
-    <div>
-      <AddCard />
-    </div>
+const Card = ({ card }) => (
+  <div className='card'>
+    <div className="cardTitle">{card.cardTitle}</div>
+    <div className="cardHeading">{card.heading}</div>
+    <Images card={card} />
+    <FollowButton />
   </div>
 );
+
+const Images = ({ card }) => {
+  return (
+    <div className="images">
+      <div className="mainImage">
+        <img src={card.mainImage} alt="Denmark" />
+      </div>
+      <div className="subimages">
+        <div className="subImage1">
+          <img src={card.subImage1} alt="Denmark" />
+        </div>
+        <div className="subImage2">
+          <img src={card.subImage2} alt="Denmark" />
+        </div>
+        <div className="subImage3">
+          <img src={card.subImage3} alt="Denmark" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const FollowButton = () => {
+  return <button className="followButton">Follow</button>;
+};
 
 // const ListHeading = ({ title }) => (
 //   <span className="listHeader">

@@ -4,69 +4,65 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("https://source.unsplash.com/1600x900/?danmark");
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
   margin: 20px;
   display: flex;
-  justify-content: space-around;
-  font-family: "Roboto", sans-serif;
+  flex-direction: column;
   font-weight: 300;
 }
 
-.list {
-  /* background-color: #ebecf0; */
-  background-color: #1e1612;
-  width: 272px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  padding: 10px;
-  height: fit-content;
-  opacity: 0.9;
+.statsRow {
+  display: flex;
+  flex-direction: row;;
 }
 
-.listHeader {
+.cards {
   display: flex;
-  justify-content: space-between;
-  margin: 5px 8px;
-  color: #fff;
-}
-.options {
-    /* color: #5f5f5f; */
-    font-size: 0.8rem;
+  flex: 1 1 1;
+  flex-wrap: wrap;
 }
 
-.allCards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .card {
-  width: 260px;
   display: flex;
   flex-direction: column;
-  height: 50px; /* height: 500px; */
-  padding: 7px;
-  margin: 5px;
-  border: 0.5px solid #000;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 0.5px 1px #5f5f5f;
+  width: 320px;
+  height: 400px;
+  border: 0.5px solid #c0c0c0;
+  border-radius: 10px;
+  box-shadow: 0.1 0.1 0.2 #c0c0c0;
+  margin: 1rem;
 }
 
-.description {
-    margin-top: 10px;
-    font-size: 0.8rem;
+.cardTitle, .cardHeading {
+  padding: 1rem;
 }
 
-.addCard {
-    color: #8f8f8f;
-    font-size: .9rem;
+.images {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mainImage {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.subimages {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.followButton {
+  width: 100%;
+  margin-top: 1rem;
+}
 
 
-}
-.plus {
-    margin: 5px 8px;
-}

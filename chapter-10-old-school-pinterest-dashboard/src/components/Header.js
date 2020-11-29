@@ -6,7 +6,7 @@ const Header = ({ stats }) => {
   return (
     <>
       <HeaderImage />
-      <span className="mainHeading">Heading Here</span>
+      <div className="mainHeading">Heading Here</div>
       <Stats stats={stats} />
     </>
   );
