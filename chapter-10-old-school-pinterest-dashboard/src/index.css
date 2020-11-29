@@ -112,6 +112,7 @@ body {
   font-size: 0.8rem;
 }
 
+/* cards */
 .cards {
   display: flex;
   flex: 1 1 1;
@@ -133,11 +134,6 @@ body {
   background-color: #fff;
   box-shadow: 1px 1px 5px #464342;
 }
-/* 
-.cardTitle,
-.cardHeading {
-
-} */
 
 .cardTitle {
  font-weight: 700;
@@ -187,6 +183,7 @@ img {
   border-radius: 5px;
 }
 
+/* button */
 .followButton {
   margin: 0.4rem;
   padding: 0.25rem;
