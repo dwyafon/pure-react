@@ -4,11 +4,11 @@ import Stats from './Stats';
 
 const Header = ({ stats }) => {
   return (
-    <>
+    <div className='header'>
       <HeaderImage />
-      <div className="mainHeading">Heading Here</div>
+      <h1 className="mainHeading">Denmark Explorer</h1>
       <Stats stats={stats} />
-    </>
+    </div>
   );
 };
 
