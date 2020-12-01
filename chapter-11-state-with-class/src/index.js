@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+
+const Page = () => (
+    // each CountingParent component has its own independent state
+    <div>
+        <CountingParent /> 
+        <CountingParent />
+        <CountingParent />
+        <CountingParent />
+    </div>
+)
+
+
 class CountingParent extends Component {
     constructor(props) {
         super(props);
@@ -37,4 +49,4 @@ function Child({ onAction }) {
     )
 }
 
-ReactDOM.render(<CountingParent />, document.getElementById('root'))
+ReactDOM.render(<Page />, document.getElementById('root'))
