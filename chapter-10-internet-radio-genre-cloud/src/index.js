@@ -10,9 +10,11 @@ const App = ({ genres }) => (
     <Header />
     <div className="cloud">
       {" "}
-      {genres.map((genre, index) => (
-        <GenreButton genre={genre} key={genre.index} />
-      ))}
+      {genres.map((genre, index) => {
+        return  index <= 10 ? <GenreButton className='btn btn-large' genre={genre} key={index} /> 
+          : index > 10 && index <= 20 ? <GenreButton className='btn btn-medium' genre={genre} key={index} />
+          : <GenreButton className='btn btn-small' genre={genre} key={index} /> 
+      })}
     </div>
   </div>
 );
