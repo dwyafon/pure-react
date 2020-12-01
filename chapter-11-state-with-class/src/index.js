@@ -1,52 +1,59 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
 const Page = () => (
-    // each CountingParent component has its own independent state
-    <div>
-        <CountingParent /> 
-        <CountingParent />
-        <CountingParent />
-        <CountingParent />
-    </div>
-)
-
+  // each CountingParent component has its own independent state
+  <div>
+    <CountingParent />
+    <CountingParent />
+    <CountingParent />
+    <CountingParent />
+  </div>
+);
 
 class CountingParent extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            actionCount: 0
+    this.state = {
+      actionCount: 0,
+    };
+
+    this.handleAction = this.handleAction.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+
+  handleAction(action) {
+    this.setState((state, props) => { 
+        return {
+            actionCount: state.actionCount + 1
         }
-
-        this.handleAction = this.handleAction.bind(this);
-    }
-
-    handleAction(action) {
-        console.log('Child says', action);
-        this.setState({
-            actionCount: this.state.actionCount + 1
-        })
-    }
-
-    render() {
-        return (
-            <div>
-                <Child onAction={this.handleAction} />
-                <p>Clicked {this.state.actionCount} times</p>
-            </div>
-        )
-    }
-};
-
-function Child({ onAction }) {
-    return (
-        <button onClick={onAction}>
-            Click Me
-        </button>
-    )
+    });
 }
 
-ReactDOM.render(<Page />, document.getElementById('root'))
+  reset() {
+    this.setState((state, props) => {
+      return {
+        actionCount: 0,
+    };
+      })  
+    }
+
+  render() {
+    return (
+      <div>
+        <Child onAction={this.handleAction} />
+        <ResetButton onAction={this.reset} />
+        <p>Clicked {this.state.actionCount} times</p>
+      </div>
+    );
+  }
+}
+
+function Child({ onAction }) {
+  return <button onClick={onAction}>Click Me</button>;
+}
+
+const ResetButton = ({ onAction }) => <button onClick={onAction}>Reset</button>;
+
+ReactDOM.render(<Page />, document.getElementById('root'));
