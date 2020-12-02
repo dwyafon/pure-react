@@ -12,18 +12,14 @@ const Page = () => (
 );
 
 class CountingParent extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    actionCount: 0,
+  };
 
-    this.state = {
-      actionCount: 0,
-    };
+  // handleAction = this.handleAction.bind(this);
+  // reset = this.reset.bind(this);
 
-    this.handleAction = this.handleAction.bind(this);
-    this.reset = this.reset.bind(this);
-  }
-
-  handleAction(action) {
+  handleAction = (action) => {
     this.setState((state, props) => { 
         return {
             actionCount: state.actionCount + 1
@@ -31,7 +27,7 @@ class CountingParent extends Component {
     });
 }
 
-  reset() {
+  reset = () => {
     this.setState((state, props) => {
       return {
         actionCount: 0,
