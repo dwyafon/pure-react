@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const Community = () => (
-  // each CountingParent component has its own independent state
   <div>
     <House />
   </div>
@@ -47,9 +46,7 @@ const Kitchen = ({ doStuff, status }) => {
     <button onClick={doStuff} name={'kitchen'} className={status === true ? 'lightOn' : ''}>
     Kitchen
   </button>
-  )
-  
-  
+  ) 
 };
 
 const Bathroom = ({ doStuff, status }) => (
@@ -69,8 +66,5 @@ const Bedroom = ({ doStuff, status }) => (
     Bedroom
   </button>
 );
-
-// const LightSwitchButton = ({ doStuff }) => {
-//   <button onClick={doStuff} name={'kitchen'}>Click</button>}
 
 ReactDOM.render(<Community />, document.getElementById('root'));
