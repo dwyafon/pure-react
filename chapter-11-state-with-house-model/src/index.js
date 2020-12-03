@@ -18,7 +18,7 @@ class House extends Component {
     },
   };
 
-  OnOff = (e) => {
+  handleSwitch = (e) => {
     const rooms = { ...this.state.rooms}
     const name = e.target.name;
     rooms[name] = !this.state.rooms[name]
@@ -32,10 +32,10 @@ class House extends Component {
   render = () => {
     return (
       <div className='container'>
-        <Kitchen doStuff={this.OnOff} status={this.state.rooms.kitchen}/>
-        <Bathroom doStuff={this.OnOff} status={this.state.rooms.bathroom}/>
-        <LivingRoom doStuff={this.OnOff} status={this.state.rooms.livingRoom}/>
-        <Bedroom doStuff={this.OnOff} status={this.state.rooms.bedroom}/>
+        <Kitchen doStuff={this.handleSwitch} status={this.state.rooms.kitchen}/>
+        <Bathroom doStuff={this.handleSwitch} status={this.state.rooms.bathroom}/>
+        <LivingRoom doStuff={this.handleSwitch} status={this.state.rooms.livingRoom}/>
+        <Bedroom doStuff={this.handleSwitch} status={this.state.rooms.bedroom}/>
       </div>
     );
   };
