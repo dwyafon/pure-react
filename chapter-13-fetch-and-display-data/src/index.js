@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import axios from "axios";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 class Reddit extends Component {
   state = {
     posts: [],
+    error: undefined,
   };
 
   componentDidMount() {
@@ -13,11 +14,23 @@ class Reddit extends Component {
       .then((res) => {
         const posts = res.data.data.children.map((obj) => obj.data);
         this.setState({ posts });
+      })
+      .catch((error) => {
+        this.setState({ error });
       });
   }
 
   render() {
-    const { posts } = this.state;
+    const { posts, error } = this.state;
+
+    if (error) {
+      return (
+        <>
+          <h2>ERROR</h2>
+          <p>{JSON.stringify(error)}</p>
+        </>
+      );
+    }
 
     return (
       <div>
@@ -34,7 +47,7 @@ class Reddit extends Component {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Reddit subreddit="reactjs" />
+    <Reddit subreddit='reactjs' />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
