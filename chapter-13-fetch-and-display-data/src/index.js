@@ -32,27 +32,22 @@ class Reddit extends Component {
           <p>{JSON.stringify(error)}</p>
         </>
       );
+    } else if (loading) {
+      content = <div>Loading . . .</div>;
+    } else {
+      content = (
+        <div>
+          <h1>{`/r/${this.props.subreddit}`}</h1>
+          <ul>
+            {posts.map((post) => (
+              <li key={post.id}>{post.title}</li>
+            ))}
+          </ul>
+        </div>
+      );
     }
 
-    else if (loading) {
-      content = <div>Loading . . .</div>
-    }
-
-    else {
-      content =   ( <div>
-      <h1>{`/r/${this.props.subreddit}`}</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
-    </div>
-      )
-    }
-
-    return (
-      <div>{content}</div>
-    );
+    return <div>{content}</div>;
   }
 }
 
