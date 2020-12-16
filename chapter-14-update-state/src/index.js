@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom'
 
 function StepTracker() {
+    // hook
     const [steps, setSteps] = useState(0)
 
     // function increment() {
@@ -14,7 +15,7 @@ function StepTracker() {
             <br />
             {/* Could have been: */}
             {/* <button onClick={increment}></button> */}
-            
+
             {/* the parameter name does not have to be the same as the state variable name */}
             {/*  using the functional/updater form of setSteps ensures that the latest state value is being operated on */}
 
