@@ -8,6 +8,8 @@ const MultiCounter = () => {
   });
   const incA = () =>
     setCounts((counts) => ({
+// syntax here: spread out the elements of the counts object, then do something to that object (replace countA with CountA: counts.countA + 1);
+// then return that updated object
       ...counts,
       countA: counts.countA + 1,
     }));
