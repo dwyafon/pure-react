@@ -5,7 +5,8 @@ function RandomList() {
   const [items, setItems] = useState([]);
 
   const addItem = () => {
-// setItems() is called passing an array that first spreads the items array and then adds a new area item -- an object with two properties
+// setItems() is called passing an array that first spreads the items array and then adds a new item to the items array -- an(other) object with two properties
+// Here, items.length is initially zero when the value for the id key is assigned
     setItems([...items, { id: items.length, value: Math.random() * 100 }]);
   };
 
