@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+}
+
+button {
+    height: 100px;
+    width: 300px;
+    margin: 2rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
