@@ -27,8 +27,6 @@ const UL = styled.ul`
   flex-wrap: wrap;
   max-width: 70%;
   padding: 0.5rem;
-
-
 `;
 
 function RandomList() {
