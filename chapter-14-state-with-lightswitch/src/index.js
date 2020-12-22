@@ -8,36 +8,27 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: ${props => props.light === true ? 'white' : 'black'};
 `
 const Button = styled.button`
-    background-color: ${props => props.light === true ? 'white' : 'black'}
+    background-color: ${props => props.light === true ? 'white' : 'black'};
+    color: ${props => props.light === true ? 'black' : 'white'};
 `
 
-const App = () => {
+const Room = () => {
+    const [light, setLight] = useState(false)
+     const hitSwitch =() => {
+        setLight(!light)
+    }
     return (
-    <Container>
-        <Room />
+    <Container light={light}>
+        <Button light={light} onClick={hitSwitch}>{light === false ? `The room is dark`: `The room is lit`}</Button>
     </Container>
     )
 }
 
 
-const Room = (props) => {
-    // hook
-    const [light, setLight] = useState(false)
 
-    const hitSwitch =() => {
-        setLight(!light)
-    }
 
-    return (
-        <div>
-            <Button onClick={hitSwitch} light> 
-                {light === false ? `The room is dark`: `The room is lit`}
-            </Button>
-        </div>
 
-    )
-}
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Room />, document.getElementById('root'))

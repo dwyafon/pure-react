@@ -5,15 +5,6 @@
     font-family: 'Inconsolata', monospace;
 }
 
-.container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #000;
-}
-
 button {
     height: 100px;
     width: 300px;
