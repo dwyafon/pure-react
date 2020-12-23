@@ -33,13 +33,14 @@ const InnerContainer = styled.div`
   justify-content: center;
 `;
 
-function AudioControls() {
+const AudioControls = () => {
   const [controls, setControls] = useState({
     volume: 1,
     treble: 1,
     mid: 1,
     bass: 1,
   });
+
 
   return (
     <Container>
