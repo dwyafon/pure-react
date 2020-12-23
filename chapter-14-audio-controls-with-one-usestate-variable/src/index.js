@@ -41,7 +41,6 @@ const AudioControls = () => {
     bass: 1,
   });
 
-
   return (
     <Container>
       <InnerContainer>
