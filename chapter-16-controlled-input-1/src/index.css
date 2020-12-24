@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #6D16A0, #EB8613);
+    color: #FFFACD;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 1.2rem;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    width: 80%;
+    background: transparent;
+    color: #fff;
+    border: none;
+}
