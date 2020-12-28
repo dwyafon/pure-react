@@ -21,7 +21,7 @@ const InputExample = () => {
   return (
     <Wrapper>
       {" "}
-      <input type="text" value={text} onChange={handleChange} placeholder='Type here' />
+      <input type="text" value={text} onChange={handleChange} placeholder='Type here' /> {/* value={text} determines what is displayed */}
     </Wrapper>
   );
 };
