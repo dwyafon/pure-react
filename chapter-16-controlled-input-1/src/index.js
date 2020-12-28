@@ -14,14 +14,18 @@ const Wrapper = styled.div`
 const InputExample = () => {
   const [text, setText] = useState("");
 
-  const handleChange = (e) => {
-    setText(e.target.value);
+  // within handleChange validation and formatting can be achieved
+  const handleChange = (e) => { 
+    let text = e.target.value; 
+    setText(text.replace(/[A-Z]/g, '')
+    );
   };
 
   return (
     <Wrapper>
       {" "}
-      <input type="text" value={text} onChange={handleChange} placeholder='Type here' /> {/* value={text} determines what is displayed */}
+      {/* value={text} prop determines what is displayed */}
+      <input type="text" value={text} onChange={handleChange} placeholder='Type here -- lowercase letters only, please' /> 
     </Wrapper>
   );
 };
