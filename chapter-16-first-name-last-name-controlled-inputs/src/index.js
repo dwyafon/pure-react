@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import styled from "styled-components";
-import "./index.css";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import styled from 'styled-components';
+import './index.css';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -12,22 +12,40 @@ const Wrapper = styled.div`
 `;
 
 const Names = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
-  const handleChange = (e) => { 
-    return e.target.name === 'first' ? setFirstName(e.target.value) : setLastName(e.target.value)
+  const handleChange = (e) => {
+    return e.target.name === 'first'
+      ? setFirstName(e.target.value)
+      : setLastName(e.target.value);
   };
 
   return (
     <Wrapper>
-      {" "}
+      {' '}
       <h1>{`Hello, ${firstName} ${lastName}`} </h1>
-      <input type="text" name='first' onChange={handleChange} placeholder='first name' /> 
-      <input type="text" name='last' onChange={handleChange} placeholder='last name' /> 
-
+      <form>
+        <label for='first'>First Name</label>
+        <input
+          type='text'
+          name='first'
+          id='first'
+          onChange={handleChange}
+          placeholder='type here'
+        />
+        <br/>
+        <label for='last'>Last Name</label>
+        <input
+          type='text'
+          name='last'
+          id='last'
+          onChange={handleChange}
+          placeholder='type here'
+        />
+      </form>
     </Wrapper>
   );
 };
 
-ReactDOM.render(<Names />, document.getElementById("root"));
+ReactDOM.render(<Names />, document.getElementById('root'));
