@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #282828;
+  color: #fffacd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.radio {
+  margin-right: 0.5rem;
+}
+
+label > input[type='radio'] {
+  margin-right: 0.3rem;
+}
+
+select {
+  padding: 0.5rem 2rem;
+}
+
+div.checkbox > label {
+  margin-right: 1rem;
+}
+
+.select,
+.checkbox,
+.textarea {
+  margin-bottom: 3rem;
+}
