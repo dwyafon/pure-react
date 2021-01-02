@@ -54,9 +54,7 @@ const ShoppingList = () => {
         {items.map((item, index) => (
           <li key={item.id}>
             {item.name}
-            <Button
-              onClick={() => dispatch({ type: "remove", index })}
-            >x</Button>
+            {item.name !== '' ? (<Button onClick={() => dispatch({ type: "remove", index })}>x</Button>) : ('') }
           </li>
         ))}
       </ul>
