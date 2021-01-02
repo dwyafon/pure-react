@@ -14,14 +14,18 @@ const Wrapper = styled.div`
 const Button = styled.button`
   background: transparent;
   border: 1px solid #fff;
-  padding: 1rem 2rem;
+  padding: 0.25rem 0.5rem;
   color: #fff;
+  margin-left: 0.5rem;
 `;
 
 const reducer = (state, value) => {
   switch (value.type) {
-    case 'add':
-      return [...state, {id: state.length, name: value.name}];
+    case "add":
+      return [...state, { id: state.length, name: value.name }];
+    case "remove":
+      console.log(value.index)
+      return state.filter((_, index) => index !== value.index);
     default:
       return state;
   }
@@ -31,14 +35,14 @@ const ShoppingList = () => {
   const inputRef = useRef();
   const [items, dispatch] = useReducer(reducer, []);
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({
-      type: 'add',
-      name: inputRef.current.value
+      type: "add",
+      name: inputRef.current.value,
     });
-    inputRef.current.value = '';
-  }
+    inputRef.current.value = "";
+  };
 
   return (
     <Wrapper>
@@ -48,7 +52,12 @@ const ShoppingList = () => {
       </form>
       <ul>
         {items.map((item, index) => (
-          <li key={item.id}>{item.name}</li>
+          <li key={item.id}>
+            {item.name}
+            <Button
+              onClick={() => dispatch({ type: "remove", index })}
+            >x</Button>
+          </li>
         ))}
       </ul>
     </Wrapper>
