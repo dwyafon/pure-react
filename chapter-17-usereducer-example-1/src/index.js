@@ -19,7 +19,7 @@ const Button = styled.button`
 `;
 
 const Counter = () => {
-  const [count, dispatcher] = useReducer((state, action) => state + action, 0); //custom name for reducer function
+  const [count, dispatcher] = useReducer((state, value) => state + value, 0); //custom name for reducer function
 
   return (
     <Wrapper>
