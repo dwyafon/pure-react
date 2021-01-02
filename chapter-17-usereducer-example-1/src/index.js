@@ -19,13 +19,13 @@ const Button = styled.button`
 `;
 
 const Counter = () => {
-  const [count, dispatch] = useReducer((state, action) => state + action, 0);
+  const [count, dispatcher] = useReducer((state, action) => state + action, 0); //custom name for reducer function
 
   return (
     <Wrapper>
     <h1>Counter</h1>
     <div className="count">{count}</div>
-      <Button onClick={() => dispatch(1)}>
+      <Button onClick={() => dispatcher(1)}>
         +
       </Button>
     </Wrapper>
