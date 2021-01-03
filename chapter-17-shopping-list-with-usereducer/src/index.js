@@ -24,8 +24,9 @@ const reducer = (state, value) => {
     case "add":
       return [...state, { id: state.length, name: value.name }];
     case "remove":
-      console.log(value.index)
       return state.filter((_, index) => index !== value.index);
+    case "clear":
+      return state.filter(e => !e);
     default:
       return state;
   }
@@ -50,6 +51,7 @@ const ShoppingList = () => {
       <form onSubmit={handleSubmit}>
         <input ref={inputRef}></input>
       </form>
+      <Button onClick={() => dispatch({ type: "clear" })}>Clear All</Button>
       <ul>
         {items.map((item, index) => (
           <li key={item.id}>
