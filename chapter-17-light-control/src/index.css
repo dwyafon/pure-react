@@ -10,18 +10,3 @@ body {
   font-size: 1.2rem;
 }
 
-input {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 1rem 2rem;
-  text-align: center;
-  margin: 1rem;
-  font-size: 2rem;
-}
-
-ul li {
-  list-style: none;
-  font-size: 2rem;
-}
-
