@@ -1,10 +1,10 @@
 // Make a “keypad” with 6 buttons that must be pressed in the correct order to unlock it. Each
 // correct button press advances the state. An incorrect button should reset it.
 
-import React, { useReducer } from "react";
-import ReactDOM from "react-dom";
-import styled from "styled-components";
-import "./index.css";
+import React, { useReducer } from 'react';
+import ReactDOM from 'react-dom';
+import styled from 'styled-components';
+import './index.css';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -15,14 +15,12 @@ const Wrapper = styled.div`
 `;
 
 const InnerContainer = styled.div`
-  width: 250px;
-  height: 250px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
   align-items: center;
-  margin: 1rem;
+  width: 200px;
+  grid-gap: 10px;
 `;
 
 const Button = styled.button`
@@ -30,60 +28,61 @@ const Button = styled.button`
   border: 1px solid #fff;
   padding: 0.5rem 0.75rem;
   color: #fff;
+  width: 100px;
+  height: 100px;
 `;
 
-const Bulb = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const Attempt = styled.div`
+  margin: 1rem;
+  padding: 1rem;
 `;
+
+const reducer = (state, value) => {
+  const answer = '164532';
+  state = state + value;
+  const slicedAnswer = answer.slice(0, state.length);
+  return state === slicedAnswer ? state : '';
+};
 
 const Keypad = () => {
-  const password = '$%&*^@'
-  // with each push of a button
-}
+  const [digits, dispatch] = useReducer(reducer, '');
 
-const Light = () => {
-  const [level, dispatch] = useReducer((level, value) => level + value, 0);
+  const handleInput = (e) => {
+    if (digits.length < 6) {
+      dispatch(e.target.value);
+    }
+  };
+
   const style =
-    level === 0
-      ? { color: "#fff" }
-      : level === 1
-      ? {
-          color: "rgba(237, 237, 22, 0.5)",
-          border: "1px solid rgba(237, 237, 22, 0.5)",
-        }
-      : level === 2
-      ? {
-          color: "rgba(237, 237, 22, 0.75)",
-          border: "1px solid rgba(237, 237, 22, 0.75)",
-        }
-      : {
-          color: "rgba(237, 237, 22, 1)",
-          border: "1px solid rgba(237, 237, 22, 1",
-        };
+    digits === '164532'
+      ? { border: '1px solid green', color: 'green' }
+      : { border: 'none', color: '#fff' };
 
   return (
     <Wrapper>
-      <Bulb>
-        <Button onClick={() => (level > 0 ? dispatch(-1) : level)}>-</Button>
-        <InnerContainer style={style}>
-          {level === 0
-            ? `off`
-            : level === 1
-            ? `low`
-            : level === 2
-            ? `medium`
-            : `high`}
-        </InnerContainer>
-        <Button onClick={() => (level < 3 ? dispatch(1) : level)}>+</Button>
-      </Bulb>
-        <Button style={{ marginTop: 18 }} onClick={() => dispatch(-level)}>
-          OFF
+      <InnerContainer>
+        <Button value='1' onClick={handleInput}>
+          1
         </Button>
-    
+        <Button value='2' onClick={handleInput}>
+          2
+        </Button>
+        <Button value='3' onClick={handleInput}>
+          3
+        </Button>
+        <Button value='4' onClick={handleInput}>
+          4
+        </Button>
+        <Button value='5' onClick={handleInput}>
+          5
+        </Button>
+        <Button value='6' onClick={handleInput}>
+          6
+        </Button>
+      </InnerContainer>
+      <Attempt style={style}>{digits}</Attempt>
     </Wrapper>
   );
 };
 
-ReactDOM.render(<Light />, document.getElementById("root"));
+ReactDOM.render(<Keypad />, document.getElementById('root'));
