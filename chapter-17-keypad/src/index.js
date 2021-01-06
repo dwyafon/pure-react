@@ -80,7 +80,7 @@ const Keypad = () => {
           6
         </Button>
       </InnerContainer>
-      <Attempt style={style}>{digits}</Attempt>
+      <Attempt style={style}>{digits.length === 0 ? `Please enter the passcode` : digits}</Attempt>
     </Wrapper>
   );
 };

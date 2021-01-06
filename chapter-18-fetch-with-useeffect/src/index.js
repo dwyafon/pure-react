@@ -10,6 +10,10 @@ function App() {
     setSubreddit(inputValue);
   };
 
+  useEffect(() => {
+    document.title = subreddit; //using `inputValue` instead of `subreddit` would result in the title changing in the tab as the input value changes
+  }, [subreddit])
+
   return (
     <>
       <form onSubmit={handleSubmit}>
