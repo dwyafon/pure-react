@@ -18,7 +18,7 @@ const Error = styled.div`
 `;
 
 function App() {
-  const [inputValue, setValue] = useState('reactjs');
+  const [inputValue, setValue] = useState('linux');
   const [subreddit, setSubreddit] = useState(inputValue);
 
   const input = useRef();
