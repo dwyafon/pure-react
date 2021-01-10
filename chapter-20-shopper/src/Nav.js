@@ -12,6 +12,7 @@ const Nav = ({ activeTab, onTabChange }) => {
         itemClass={itemClass}
         onTabChange={onTabChange}
       />
+      <span className="cartSummary">{`${count} items (${getTotal(items)})`}</span>
     </nav>
   );
 };

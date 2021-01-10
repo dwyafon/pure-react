@@ -35,11 +35,9 @@ const App = () => {
     }
   };
 
-
-
   return (
     <div className='App'>
-      <Nav activeTab={activeTab} onTabChange={setActiveTab} />
+      <Nav activeTab={activeTab} onTabChange={setActiveTab} getTotal={getTotal} cart={summarizeCart(cart)} />
       <main className='App-content'>
         <Content
           tab={activeTab}
