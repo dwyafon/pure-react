@@ -1,13 +1,9 @@
 import React from 'react';
+import {navList} from './navlist'
 
 const Nav = ({ activeTab, onTabChange }) => {
   const itemClass = (tabName) =>
     `App-nav-item ${activeTab === tabName ? 'selected' : ''}`;
-
-  const navList = [
-    { name: 'items', id: 1 },
-    { name: 'cart', id: 2 },
-  ];
 
   return (
     <nav className='App-nav'>
@@ -22,11 +18,11 @@ const Nav = ({ activeTab, onTabChange }) => {
 
 const NavItems = ({ navList, itemClass, onTabChange }) => (
   <ul>
-    {navList.map((tab, idx) => (
-      <li key={navList[idx].id} className={itemClass(`${navList[idx].name}`)}>
+    {navList.map((tab) => (
+      <li key={tab.id} className={itemClass(`${tab.name}`)}>
         <button
-          onClick={() => onTabChange(`${navList[idx].name}`)}
-        >{`${navList[idx].name}`}</button>
+          onClick={() => onTabChange(`${tab.name}`)}
+        >{`${tab.name}`}</button>
       </li>
     ))}
   </ul>

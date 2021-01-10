@@ -29,6 +29,10 @@
   border-bottom: 4px solid transparent;
 }
 
+.App-nav-item button, .App-nav-item button:hover, .App-nav-item button:focus {
+  outline: none;
+}
+
 .App-nav-item button:hover {
   color: #999;
 }
