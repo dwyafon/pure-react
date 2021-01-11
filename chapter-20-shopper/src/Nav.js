@@ -29,11 +29,11 @@ const NavItems = ({ navList, itemClass, onTabChange }) => (
   </ul>
 );
 
-const CartSummary = ( { getTotal, items}) => {
+const CartSummary = ( { getTotal, items, onTabChange}) => {
   const totalCount = items.reduce((total, item) => total + item.count, 0)
   return (
   <span className="cartSummary">
-    <button>
+    <button onClick={() => onTabChange('Cart')}>
       {" "}
       <i className="fas fa-shopping-cart" /> {totalCount} items (£{getTotal(items)})
     </button>
