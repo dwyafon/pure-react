@@ -7,8 +7,11 @@
   margin: 20px;
   padding: 10px;
   border-bottom: 2px solid #508fca;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 25% auto;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 .App-nav ul {
@@ -45,5 +48,13 @@
 
 .App-content {
   margin: 0 20px;
+}
+
+.cartSummary {
+ justify-self: end;
+}
+
+.cartSummary button {
+  color: #777;
 }
 

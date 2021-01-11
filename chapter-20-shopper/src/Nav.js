@@ -1,18 +1,18 @@
-import React from 'react';
-import {navList} from './navlist'
+import React from "react";
+import { navList } from "./navlist";
 
-const Nav = ({ activeTab, onTabChange }) => {
+const Nav = ({ activeTab, onTabChange, cart, getTotal }) => {
   const itemClass = (tabName) =>
-    `App-nav-item ${activeTab === tabName ? 'selected' : ''}`;
+    `App-nav-item ${activeTab === tabName ? "selected" : ""}`;
 
   return (
-    <nav className='App-nav'>
+    <nav className="App-nav">
       <NavItems
         navList={navList}
         itemClass={itemClass}
         onTabChange={onTabChange}
       />
-      <span className="cartSummary">{`${count} items (${getTotal(items)})`}</span>
+      <CartSummary onTabChange={onTabChange} items={cart} getTotal={getTotal}/>
     </nav>
   );
 };
@@ -28,5 +28,17 @@ const NavItems = ({ navList, itemClass, onTabChange }) => (
     ))}
   </ul>
 );
+
+const CartSummary = ( { getTotal, items}) => {
+  const totalCount = items.reduce((total, item) => total + item.count, 0)
+  return (
+  <span className="cartSummary">
+    <button>
+      {" "}
+      <i className="fas fa-shopping-cart" /> {totalCount} items (£{getTotal(items)})
+    </button>
+  </span>
+  )
+}
 
 export default Nav;

@@ -52,11 +52,12 @@ const App = () => {
 };
 
 const Content = ({ tab, cart, onAddToCart, onRemoveItem, getTotal }) => {
+  console.log(tab)
   switch (tab) {
     default:
-    case 'items':
+    case 'Items':
       return <ItemPage items={items} onAddToCart={onAddToCart} />; // imported 'items' array of objects
-    case 'cart':
+    case 'Cart':
       return (
         <CartPage
           items={cart}
